@@ -13,22 +13,22 @@ if len(letter) != 1:
 count = 0
 print("searching for" + letter + "in" + word)
 if word[0] == letter:
-    print(letter+"found at index 0")
+    print(letter + "found at index 0")
     count = count + 1
 if word[1] == letter: 
-    print(letter+"found at index 1")
+    print(letter + "found at index 1")
     count = count + 1 
 if word[2] == letter: 
-    print(letter+"found at index 2")
+    print(letter + "found at index 2")
     count = count + 1
 if word[3] == letter: 
-    print(letter+"found at index 3")
+    print(letter + "found at index 3")
     count = count + 1
 if word[4] == letter:
-    print(letter+"found at index 4")
+    print(letter + "found at index 4")
     count = count + 1
 if count == 0:
     print("No instances of" + letter + "found in" + word)
 else: 
-    print(count + "instances of" + letter +"found in" + word)
+    print(count + "instances of" + letter + "found in" + word)
 print(count)
