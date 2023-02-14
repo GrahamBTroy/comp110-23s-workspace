@@ -13,7 +13,7 @@ playing: bool = True
 
 while playing:
  while count <= len(correct_word): 
-    if word_index == correct_word[count]: 
+    if word[count] == correct_word[count]: 
         box_storer + GREEN_BOX
     else:
         box_storer + WHITE_BOX
