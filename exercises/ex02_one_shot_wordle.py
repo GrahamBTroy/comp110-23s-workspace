@@ -1,7 +1,7 @@
 """EX02-One Shot Wordle - Loops!"""
 
 ___author___ = "730560158"
-correct_word = "dragon"
+correct_word = "python"
 word = input("What is your 6 letter guess? ")
 playing: bool = True 
 
