@@ -11,8 +11,8 @@ while playing:
  if len(word) == 6: 
    if word == correct_word: 
      print("Woo! You got it!")
-     playing == False
+     playing = False
    else:
      print("Not quite. Play again soon!")
- playing == False
+ playing = False
 
