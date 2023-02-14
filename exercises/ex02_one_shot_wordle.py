@@ -12,17 +12,21 @@ box_storer = ""
 playing: bool = True 
 
 while playing:
- while word_index >= len(correct_word): 
+ while count <= len(correct_word): 
     if word_index == correct_word[count]: 
-        append
+        box_storer + GREEN_BOX
+    else:
+        box_storer + WHITE_BOX
     count = count+1
  if len(word) != 6:
   word = input("That was not 6 letters! Try again: ")
  if len(word) == 6: 
-   if word == correct_word: 
+   if word == correct_word:  
+     print(box_storer)
      print("Woo! You got it! ")
      playing = False
    else:
+     print(box_storer)
      print("Not quite. Play again soon!")
  playing = False
 
