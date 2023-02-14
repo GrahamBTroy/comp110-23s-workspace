@@ -3,12 +3,16 @@
 ___author___ = "730560158"
 correct_word = "python"
 word = input("What is your 6 letter guess?")
+playing: bool = True 
 
-if len(word) != 6:
- print("That was not 6 letters! Try again:")
-if len(word) == 6: 
-  if word == correct_word: 
-    print("Woo! You got it!")
-  else:
-    print("Not quite. Play again soon!")
+while playing:
+ if len(word) != 6:
+  word = input("That was not 6 letters! Try again:")
+ if len(word) == 6: 
+   if word == correct_word: 
+     print("Woo! You got it!")
+     playing == False
+   else:
+     print("Not quite. Play again soon!")
+     playing == False
 
