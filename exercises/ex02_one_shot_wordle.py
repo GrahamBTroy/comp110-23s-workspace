@@ -5,13 +5,13 @@ correct_word = "python"
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
-length = 6
+length = len(correct_word)
 print_length = str(length)
 word = input("What is your " + print_length + " letter guess? ")
 while len(word) != length:
     word = input("That was not " + print_length + " letters! Try again: ")
 
-count = 0
+count: int = 0
 word_index = word[count]
 box_storer = ""
 playing: bool = True 
@@ -23,12 +23,15 @@ while playing:
     if word[count] == correct_word[count]: 
         box_storer += GREEN_BOX
     else:
-        while Alternative_placement == False and char_count < len(correct_word):
+        while not Alternative_placement and char_count < len(correct_word):
             if word[char_count] == correct_word[count]:
-                box_storer += YELLOW_BOX
+                Alternative_placement = True
             else:
-                box_storer += WHITE_BOX
-            char_count = char_count + 1
+                char_count = char_count + 1 
+        if Alternative_placement: 
+            box_storer += YELLOW_BOX
+        else: 
+            box_storer += WHITE_BOX
     count = count + 1
  if len(word) == length: 
    if word == correct_word:  
