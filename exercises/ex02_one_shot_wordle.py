@@ -6,21 +6,29 @@ WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 length = 6
-word = input("What is your " + length + " letter guess? ")
+print_length = str(length)
+word = input("What is your " + print_length + " letter guess? ")
 while len(word) != length:
-    word = input("That was not 6 letters! Try again: ")
+    word = input("That was not " + print_length + " letters! Try again: ")
 
 count = 0
 word_index = word[count]
 box_storer = ""
 playing: bool = True 
+Alternative_placement: bool =  False
+char_count = 0
 
 while playing:
  while count < len(correct_word): 
     if word[count] == correct_word[count]: 
         box_storer += GREEN_BOX
     else:
-        box_storer += WHITE_BOX
+        while Alternative_placement == False and char_count < len(correct_word):
+            if word[char_count] == correct_word[count]:
+                box_storer += YELLOW_BOX
+            else:
+                box_storer += WHITE_BOX
+            char_count = char_count + 1
     count = count + 1
  if len(word) == length: 
    if word == correct_word:  
