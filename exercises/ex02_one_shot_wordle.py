@@ -1,5 +1,5 @@
-__author__ = "730560158"
 """EX02-One Shot Wordle - Loops!"""
+__author__ = "730560158"
 correct_word = "python"
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
@@ -9,7 +9,7 @@ print_length = str(length)
 word = input("What is your " + print_length + " letter guess? ")
 while len(word) != length:
     word = input("That was not " + print_length + " letters! Try again: ")
-## word: str = "pointy"
+# word: str = "pointy"
 
 count: int = 0
 word_index = word[count]
