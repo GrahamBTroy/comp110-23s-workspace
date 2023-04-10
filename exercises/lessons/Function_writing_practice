@@ -1,5 +1,0 @@
-def mimic_letter(my_words: str, letter_idx: int)-> str:
-
- if letter_idx >= len(my_words): 
-    return("Index too high")
- return my_words[letter_idx]
