@@ -26,3 +26,40 @@ def columnar(table: list[dict[str,str]]) -> dict[str,list[str]]:
          # for each key, make a dictionary entry with all column values
          result[key] = column_values(table, key)
     return result
+
+def head(table: dict[str, list[str]], N: int) -> dict[str, list[str]]:
+    end: dict[str,list[str]] = {}
+    for x in table:
+        n: int = 0
+        begin: list[str] = []
+        while n < N: 
+            begin.append(table[x][n])
+            n += 1
+        end[x] = begin
+    return end
+
+def select(table: dict[str, list[str]], chair: list[str]) -> dict[str, list[str]]:
+    end: dict[str, list[str]] = {}
+    for x in chair: 
+        end[x] = table[x]
+    return end
+
+def concat(table: dict[str, list[str]], table2: dict[str, list[str]]) -> dict[str, list[str]]: 
+    end: dict[str, list[str]] = {}
+    for x in table: 
+        end[x] = table[x]
+    for y in table2: 
+       n: int = 0
+       if y in end: 
+            while n < len(table2[y]):
+                end[y].append(table2[y][n])
+                n += 1
+       else: 
+           end[y] = table2[y]
+    return end
+
+
+
+        
+
+
