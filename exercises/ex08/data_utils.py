@@ -35,6 +35,8 @@ def head(table: dict[str, list[str]], N: int) -> dict[str, list[str]]:
         while n < N: 
             begin.append(table[x][n])
             n += 1
+            if N > len(table): 
+                N = len(table)
         end[x] = begin
     return end
 
